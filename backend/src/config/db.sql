@@ -21,7 +21,7 @@ CREATE TABLE users (
     createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
     updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     height INT,
-    age INT,
+    age INT,    
     image VARCHAR(250)
 );
 

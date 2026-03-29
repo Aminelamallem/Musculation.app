@@ -9,6 +9,7 @@ export class AuthController {
                 return res.status(400).json({ message: "Identifiant requise" });
             }
             const userIfExist = await UserModel.getUserByEmail(email);
+            console.log(userIfExist);
             if (!userIfExist) {
                 return res.status(401).json({ message: "Crendential not valide" });
             }

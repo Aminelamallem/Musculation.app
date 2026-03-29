@@ -13,6 +13,7 @@ import { UserModel } from "../../repository/UserRepository.js";
         return res.status(400).json({ message: "Identifiant requise" })
       }
       const userIfExist = await UserModel.getUserByEmail(email) as IUser
+      console.log(userIfExist)
       if (!userIfExist) {
         return res.status(401).json({ message: "Crendential not valide" })
       }
@@ -28,6 +29,8 @@ import { UserModel } from "../../repository/UserRepository.js";
       })
       return res.status(200).json({
         message: "Connexion réussit",
+
+        
 
       })
 
